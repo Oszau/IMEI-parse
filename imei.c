@@ -11,7 +11,7 @@ uint8_t main(uint8_t argc, uint8_t *argv[]) {
   uint8_t *imei = argv[1];
   if(strlen(imei) != 15) { printf("Error imei"); return 0; }
   printf("%s", imei);
-  uint8_t even, odd, crc;
+  uint8_t even=0, odd=0, crc;
   for(uint8_t i=0;i<14;i++) {
     if(i%2) {
       even += table[imei[i]-48];
